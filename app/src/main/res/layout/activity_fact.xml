@@ -1,0 +1,295 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_fact_scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_fact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layout"
+        android:orientation="vertical">
+
+        <!--事件地址-back-->
+        <LinearLayout
+            android:id="@+id/ll_event_address_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_event_address_hint_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="事件地址"
+                android:textColor="@color/text_333" />
+            <EditText
+                android:id="@+id/ed_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLength="15"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+
+        </LinearLayout>
+
+
+
+        <!--事件类型-->
+        <LinearLayout
+            android:id="@+id/rl_event_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <TextView
+                android:id="@+id/tv_event_type_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="事件类型"
+                android:textColor="@color/text_333" />
+            <EditText
+                android:id="@+id/ed_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLength="15"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+
+        </LinearLayout>
+
+        <!--事发时间-->
+        <LinearLayout
+            android:id="@+id/ll_happen_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_happen_time_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="事发时间"
+                android:textColor="@color/text_333" />
+
+            <TextView
+                android:id="@+id/tv_happen_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="请选择" />
+
+        </LinearLayout>
+
+
+        <!--事发规模-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_event_scope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_event_scope_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="事发规模"
+                android:textColor="@color/text_333" />
+
+            <TextView
+                android:id="@+id/tv_event_scope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="请选择" />
+
+        </LinearLayout>
+
+        <!--涉及人数-->
+        <LinearLayout
+            android:id="@+id/ll_involve_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_involve_number_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="涉及人数"
+                android:textColor="@color/text_333" />
+
+            <EditText
+                android:id="@+id/ed_involve_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+
+        <!--涉事场所-->
+        <LinearLayout
+            android:id="@+id/ll_involve_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_involve_place_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="涉事场所"
+                android:textColor="@color/text_333" />
+            <EditText
+                android:id="@+id/ed_involve_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLength="15"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+
+        </LinearLayout>
+
+        <!--涉事人员-->
+        <LinearLayout
+            android:id="@+id/ll_involve_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_involve_person_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="涉事人员"
+                android:textColor="@color/text_333" />
+            <EditText
+                android:id="@+id/ed_involve_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+        </LinearLayout>
+
+
+        <!--事件描述-->
+        <LinearLayout
+            android:id="@+id/ll_event_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_event_content_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_333"
+                    tools:text="事件描述" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/ed_event_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@null"
+                android:gravity="left|top|center_vertical"
+                android:hint="请输入具体的时间、地点、具体的事件描述信息！(最少输入15个字)"
+                android:maxLength="500"
+                android:maxLines="4"
+                android:minLines="4"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <!--登录按钮-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_report"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/blue_click"
+            android:gravity="center"
+            android:text="上报"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</ScrollView>
+

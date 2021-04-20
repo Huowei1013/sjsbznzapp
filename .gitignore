@@ -1,0 +1,14 @@
+*.iml
+/.idea/*
+/.gradle/*
+/build/*
+/gradle/*
+/captures
+/*/release
+gradlew
+gradlew.bat
+#gradle.properties
+local.properties
+/app/tinker-support.gradle
+/*/build
+#/app/src/main/java/com/beagle/xssjrdapp/greendao/gen/

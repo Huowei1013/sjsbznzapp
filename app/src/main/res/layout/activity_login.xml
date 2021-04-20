@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.bysj.znzapp.com.bysj.znzapp.activity.LoginActivity">
+
+    <!--主背景-->
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/login_background" />
+
+    <!--用户名-->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txt_username"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:hint="用户名"
+        android:paddingLeft="50dp"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/background_gray2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:ignore="RtlCompat" />
+
+    <!--密码-->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txt_password"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:paddingLeft="50dp"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/background_gray2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:layout_marginLeft="25dp"
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="没有账户？请点击注册"
+        android:textColor="@color/colorTextG2"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <!--登录按钮-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorTextG1"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+    <!--主图标-->
+    <ImageView
+        android:id="@+id/login_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_username"
+        app:layout_constraintRight_toRightOf="@+id/txt_username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/login_icon" />
+
+    <!--用户名-图标-->
+    <ImageView
+        android:id="@+id/img_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_username"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/txt_username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        app:srcCompat="@mipmap/login_name" />
+
+    <!--密码-图标-->
+    <ImageView
+        android:id="@+id/img_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/img_username"
+        app:layout_constraintRight_toRightOf="@+id/img_username"
+        app:layout_constraintTop_toBottomOf="@+id/img_username"
+        app:layout_constraintVertical_bias="0.82"
+        app:srcCompat="@mipmap/login_password" />
+
+    <!--普通登录-->
+    <com.bysj.znzapp.views.UnderlineTextView
+        android:visibility="gone"
+        android:id="@+id/tab_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:paddingBottom="7dp"
+        android:text="普通登录"
+        android:textColor="@color/text_333"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/login_icon"
+        app:layout_constraintTop_toBottomOf="@+id/login_icon" />
+
+    <!--手机登录-->
+    <com.bysj.znzapp.views.UnderlineTextView
+        android:visibility="gone"
+        android:id="@+id/tab_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:paddingBottom="7dp"
+        android:text="手机登录"
+        android:textColor="@color/text_333"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/login_icon"
+        app:layout_constraintTop_toBottomOf="@+id/login_icon" />
+
+    <!--发送验证码-->
+    <TextView
+        android:id="@+id/txt_sendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送验证码"
+        android:textColor="@color/text_333"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_password"
+        app:layout_constraintEnd_toEndOf="@+id/txt_password"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

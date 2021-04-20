@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        android:background="#ffebebeb"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv_play_voice"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/voice" />
+
+        <ImageView
+            android:id="@+id/ivAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/iv_play_voice" />
+
+        <ImageView
+            android:id="@+id/iv_close_voice"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/close_voice"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_record"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="12dp"
+        android:background="@mipmap/record" />
+</LinearLayout>
+

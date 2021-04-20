@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="250dp"
+    android:layout_height="125dp"
+    android:background="@drawable/i_cycle">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="提示"
+        android:gravity="center"
+        android:textSize="@dimen/subtitle"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextG3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="前后密码输入不一致，请重新输入！"
+        android:gravity="center"
+        android:textSize="@dimen/sub_content"
+        android:textColor="@color/colorTextG3"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/line"/>
+
+    <Button
+        android:id="@+id/besure"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:text="确定"
+        android:textColor="@color/btn_blue"/>
+
+</LinearLayout>

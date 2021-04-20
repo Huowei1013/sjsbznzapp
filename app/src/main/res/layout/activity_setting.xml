@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <!--修改密码-->
+    <RelativeLayout
+        android:id="@+id/layout_setChangePsw"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin"
+            android:text="@string/settingChangepass"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_right" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/deep_gray" />
+
+    <!--修改敏感数据密码-->
+    <RelativeLayout
+        android:id="@+id/layout_setChangeSenPsw"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin"
+            android:text="修改敏感数据密码"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_right" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/deep_gray"
+        android:visibility="gone" />
+
+    <!--登陆设备管理-->
+    <RelativeLayout
+        android:id="@+id/layout_setLoginDevice"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin"
+            android:text="登陆设备管理"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_right" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/deep_gray"
+        android:visibility="gone" />
+
+    <!--提醒设置-->
+    <RelativeLayout
+        android:id="@+id/layout_setRemind"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin"
+            android:text="@string/settingRemind"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_right" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/deep_gray"
+        android:visibility="gone" />
+
+    <!--清除缓存-->
+    <RelativeLayout
+        android:id="@+id/layout_setClearCache"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin"
+            android:text="@string/settingClear"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/deep_gray"
+        android:visibility="gone" />
+
+    <!--版本更新记录-->
+    <RelativeLayout
+        android:id="@+id/layout_setVersionUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin"
+            android:text="版本更新记录"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_right" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/deep_gray" />
+
+    <!--关于APP-->
+    <RelativeLayout
+        android:id="@+id/layout_setAboutApp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/tv_about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin"
+            android:text="@string/settingAboutApp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_right" />
+
+    </RelativeLayout>
+
+    <!--退出登录-->
+    <TextView
+        android:id="@+id/txt_setLogout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/settingLogout"
+        android:textColor="@color/text_color" />
+
+</LinearLayout>

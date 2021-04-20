@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">智能针</string>
+
+    <string name="mainApplicationTitle">首页</string>
+    <string name="mainServiceTitle">服务概况</string>
+    <string name="mainMessageTitle">我的消息</string>
+    <string name="mainMyTitle">个人中心</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mySetting">设置</string>
+    <string name="settingChangepass">修改密码</string>
+    <string name="settingRemind">提醒设置</string>
+    <string name="settingClear">清除缓存</string>
+    <string name="settingAboutApp">关于App</string>
+    <string name="settingLogout">退出登录</string>
+    <string name="null_user_name">没有账户？请点击</string>
+    <string name="register">注册</string>
+</resources>

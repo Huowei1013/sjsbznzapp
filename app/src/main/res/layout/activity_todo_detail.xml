@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout"
+    android:fillViewport="true"
+    tools:context=".activity.TodoDetailActivity">
+
+    <LinearLayout
+
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <!--事件编号-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/prl_former_deals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--事件编号标题-->
+            <TextView
+                android:id="@+id/tv_tv_no_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="事件编号："
+                android:textColor="@color/text_333"
+                app:layout_marginLeftPercent="5%"
+                app:layout_widthPercent="30%" />
+
+            <!--事件编号文字-->
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_tv_no_hint"
+                android:layout_weight="1"
+                android:textColor="@color/text_666"
+                tools:text="TextView" />
+
+            <!--事件编号操作-->
+            <Button
+                android:id="@+id/btn_former_deals"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/i_cycle_button"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_marginRightPercent="5%" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/my_right"
+                android:visibility="gone"
+                app:layout_marginRightPercent="5%" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+        <!--事件来源-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--事件来源标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="事件来源："
+                android:textColor="@color/text_333" />
+
+            <!--事件来源文字-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:textColor="@color/text_666"
+                android:text="智能针APP" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+        <!--事件类型-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--事件类型标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="事件类型："
+                android:textColor="@color/text_333" />
+
+            <!--事件类型文字-->
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:textColor="@color/text_666"
+                app:layout_marginRightPercent="5%"
+                app:layout_widthPercent="60%"
+                tools:text="TextView" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+        <!--所属网格-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--所属网格标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="所属网格："
+                android:textColor="@color/text_333" />
+
+            <!--所属网格标题-->
+            <TextView
+                android:id="@+id/tv_grid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:textColor="@color/text_666"
+                tools:text="TextView" />
+
+        </LinearLayout>
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+        <!--上报人-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--上报人标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="上报人："
+                android:textColor="@color/text_333" />
+
+            <!--上报人文字-->
+            <TextView
+                android:id="@+id/tv_fact_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:textColor="@color/text_666"
+                tools:text="TextView" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+        <!--上报人电话-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--上报人电话标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="上报人电话："
+                android:textColor="@color/text_333"
+                app:layout_marginLeftPercent="5%"
+                app:layout_widthPercent="30%" />
+
+            <!--上报人电话文字-->
+            <TextView
+                android:id="@+id/tv_tel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:textColor="@color/text_666"
+                app:layout_marginRightPercent="5%"
+                app:layout_widthPercent="60%"
+                tools:text="TextView" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+        <!--上报时间-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--上报时间标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="上报时间："
+                android:textColor="@color/text_333"
+                app:layout_marginLeftPercent="5%"
+                app:layout_widthPercent="30%" />
+
+            <!--上报时间文字-->
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:textColor="@color/text_666"
+                app:layout_marginRightPercent="5%"
+                app:layout_widthPercent="60%"
+                tools:text="TextView" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+        <!--事件地址-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--事件地址标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="事件地址："
+                android:textColor="@color/text_333"
+                app:layout_marginLeftPercent="5%"
+                app:layout_widthPercent="30%" />
+
+            <!--事件地址文字-->
+            <TextView
+                android:id="@+id/tv_place"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:textColor="@color/text_333"
+                app:layout_marginRightPercent="5%"
+                app:layout_widthPercent="60%"
+                tools:text="TextView" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+        <!--事件描述-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <!--事件描述标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="事件描述："
+                android:textColor="@color/text_333"
+                app:layout_marginLeftPercent="5%"
+                app:layout_widthPercent="30%" />
+
+            <!--事件描述文字-->
+            <EditText
+                android:id="@+id/tv_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:background="@null"
+                android:textColor="@color/text_666"
+                android:textSize="14sp"
+                tools:text="TextView" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

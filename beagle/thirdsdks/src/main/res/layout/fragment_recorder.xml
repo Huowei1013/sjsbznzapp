@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:maxHeight="5dp"
+        android:focusable="false"
+        android:layout_weight="4"
+        android:max="100"
+        android:thumb="@drawable/seekbar_thumb"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:secondaryProgress="@color/text_color"/>
+
+    <TextView
+        android:id="@+id/recorderTime"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/recorderBtn"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:background="@drawable/submitbutton_background"
+        android:textColor="@android:color/white"
+        android:text="录音" />
+
+    <Button
+        android:id="@+id/playBtn"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/submitbutton_background"
+        android:textColor="@android:color/white"
+        android:text="播放" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/submitbutton_background"
+        android:textColor="@android:color/white"
+        android:text="删除" />
+
+</LinearLayout>

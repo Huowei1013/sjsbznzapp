@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="头像"
+            android:textSize="16sp"
+            android:textColor="@color/text_333"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/tv_image"
+            android:layout_marginTop="5dp"
+            android:layout_width="46dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="46dp"
+            tools:src="@mipmap/app_icon"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/my_right"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/z_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="用户姓名"
+            android:textSize="16sp"
+            android:textColor="@color/text_333"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            tools:text="wanggeyuan"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/z_line"/>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_grid"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="管辖网格"
+            android:textSize="16sp"
+            android:textColor="@color/text_333"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_grid"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            tools:text="某某网格"/>
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/my_right"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="联系电话"
+            android:textSize="16sp"
+            android:textColor="@color/text_333"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_telephone"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="未设置"
+            tools:text="1333333333333"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/my_right"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/z_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="电子邮箱"
+            android:textColor="@color/text_333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:hint="未设置"
+            android:gravity="center_vertical"
+            tools:text="beagle@bd-apaas.com" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/my_right" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,3 @@
+include ':beagle:thirdsdks'
+include ':app'
+rootProject.name = "znzapp"

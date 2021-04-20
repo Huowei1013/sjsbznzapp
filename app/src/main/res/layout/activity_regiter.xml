@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="头像"
+            android:textSize="16sp"
+            android:textColor="@color/text_333"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/tv_image"
+            android:layout_marginTop="5dp"
+            android:layout_width="46dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="46dp"
+            tools:src="@mipmap/app_icon"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/my_right"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/z_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="用户账号"
+            android:textSize="16sp"
+            android:textColor="@color/text_333"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:layout_marginLeft="5dip"
+            android:id="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="请输入账号"/>
+
+    </LinearLayout>
+    <include layout="@layout/z_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="用户密码"
+            android:textSize="16sp"
+            android:textColor="@color/text_333"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:layout_marginLeft="5dip"
+            android:id="@+id/tv_password"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:hint="请输入密码"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/z_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="联系电话"
+            android:textSize="16sp"
+            android:textColor="@color/text_333"
+            android:paddingLeft="20dp"/>
+
+
+        <EditText
+            android:layout_marginLeft="5dip"
+            android:id="@+id/tv_phone"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:maxLength="11"
+            android:hint="请输入手机号"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/z_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="电子邮箱"
+            android:textColor="@color/text_333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_marginLeft="5dip"
+            android:id="@+id/tv_email"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="请输入邮箱"/>
+
+
+    </LinearLayout>
+    <!--登录按钮-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/blue_click"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+</LinearLayout>

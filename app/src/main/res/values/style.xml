@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="BaseznzappTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="colorAccent">@color/colorAccent</item> -->
+        <item name="colorAccent">@color/blue_no_click</item>
+    </style>
+
+    <style name="znzappTheme" parent="@style/BaseznzappTheme" />
+
+    <!--透明主题-->
+    <style name="SplashTheme" parent="android:Theme.Translucent.NoTitleBar.Fullscreen" />
+
+    <style name="CustomTabLayoutTheme" parent="Widget.Design.TabLayout">
+        <item name="tabPaddingStart">5dp</item>
+        <item name="tabPaddingEnd">5dp</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+    </style>
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabPaddingStart">5dp</item>
+        <item name="tabPaddingEnd">5dp</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+    </style>
+
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!--<style name="ss" parent="Base.Widget.AppCompat.SeekBar"/>-->
+
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="record_voice_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@drawable/round_background</item>
+    </style>
+</resources>

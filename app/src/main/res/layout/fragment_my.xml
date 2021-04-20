@@ -1,0 +1,145 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.bysj.znzapp.com.bysj.znzapp.fragment.MyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--第一行-->
+        <LinearLayout
+            android:id="@+id/ll_firstLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_my_photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/my_photo" />
+
+            <RelativeLayout
+                android:id="@+id/rl_my_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_toRightOf="@+id/img_myPhoto"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_my_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/colorTextG4"
+                    android:textSize="18sp"
+                    tools:text="张三" />
+
+                <TextView
+                    android:id="@+id/tv_my_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_my_name"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/text_333"
+                    tools:text="大西门社区" />
+
+                <TextView
+                    android:id="@+id/tv_my_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_my_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/tv_my_department"
+                    android:paddingLeft="8dp"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/text_333"
+                    tools:text="网格员" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="8dp"
+                app:srcCompat="@mipmap/my_right" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_below="@+id/myPhoto"
+            android:layout_marginTop="8dp"
+            android:background="@color/layout" />
+
+        <!--第二行-->
+        <LinearLayout
+            android:id="@+id/ll_secondLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--设置-->
+            <RelativeLayout
+                android:id="@+id/rl_my_setting"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_my_setting"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/my_setting" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_my_setting"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_vertical"
+                    android:textStyle="normal"
+                    android:textColor="@color/text_333"
+                    android:text="@string/mySetting"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@mipmap/my_right" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#e0e0e0"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/launch_background">
+
+    <ImageView
+        android:id="@+id/launch_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/launch_text"
+        android:scaleType="centerCrop"
+        app:layout_marginTopPercent="8%" />
+
+    <ImageView
+        android:id="@+id/launch_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/launch_text"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/launch_icon"
+        android:scaleType="centerCrop"
+        app:layout_marginTopPercent="8%" />
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

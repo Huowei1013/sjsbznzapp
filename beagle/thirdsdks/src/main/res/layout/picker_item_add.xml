@@ -1,0 +1,15 @@
+<com.thirdsdks.pickphoto.SquareItemLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_item_photo"
+    android:padding="1dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@mipmap/add_img"
+        android:textSize="32dp" />
+
+</com.thirdsdks.pickphoto.SquareItemLayout>

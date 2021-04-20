@@ -1,0 +1,103 @@
+apply plugin: 'com.android.library'
+
+android {
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [PACKAGE_NAME : "com.beagle.xssjrdapp",
+                                    JPUSH_APPKEY_VALUE : "b0945dc57ea81aa8d9df968d",
+                                    BAIDU_APPKEY_VALUE : "L3lvAu684fhG7BsVXVoylYH4DYROyL1x",
+                                    BAIDU_TRACE_EYE: "225899"]
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [PACKAGE_NAME : "com.beagle.xssjrdapp.debug",
+                                    JPUSH_APPKEY_VALUE : "045ca9b0e9398eb54bacdab1",
+                                    BAIDU_APPKEY_VALUE : "BS6YiqG5GOUnB4yKAK4Nzw3U9nb8a7VE",
+                                    BAIDU_TRACE_EYE: "225898"]
+        }
+        demo {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [PACKAGE_NAME : "com.beagle.xssjrdapp.debug",
+                                    JPUSH_APPKEY_VALUE : "045ca9b0e9398eb54bacdab1",
+                                    BAIDU_APPKEY_VALUE : "BS6YiqG5GOUnB4yKAK4Nzw3U9nb8a7VE",
+                                    BAIDU_TRACE_EYE: "225898"]
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    publishNonDefault true
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api rootProject.ext.dependencies["compressor"]
+    api rootProject.ext.dependencies["crashreport_upgrade"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["gsy-videoplayer"]
+    api rootProject.ext.dependencies["greendao"]
+    api rootProject.ext.dependencies["ilivesdk"]
+    api rootProject.ext.dependencies["ilivefilter"]
+    api rootProject.ext.dependencies["livesdk"]
+    api rootProject.ext.dependencies["logger"]
+    api rootProject.ext.dependencies["okhttp3"]
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    api rootProject.ext.dependencies["rotatephotoview"]
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["sonic"]
+    api rootProject.ext.dependencies["tinker"]
+
+    // 百度地图
+    api files('libs/BaiduLBS_Android.jar')
+    api files('libs/BaiduTraceSDK_v3_0_7.jar')
+
+    // 极光推送
+    api files('libs/jcore-android_v1.1.3.jar')
+    api files('libs/jpush-android_v3.0.6.jar')
+
+    // 上传照片、视频
+    api files('libs/txrtmpsdk.jar')
+    api files('libs/ugcupload.jar')
+
+    // 讯飞语音识别
+    api files('libs/Msc.jar')
+
+    // bilibili boxing
+    api files("libs/boxing-1.0.0.aar")
+    api files("libs/boxing-impl-1.0.0.aar")
+
+    // 比格component
+    api files("libs/component-1.0.0.aar")
+}

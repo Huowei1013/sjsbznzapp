@@ -1,0 +1,121 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+android {
+
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        applicationId "com.bysj.znzapp"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        ndk {
+            // 选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi-v7a'
+            // 还可以添加 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+                includeCompileClasspath = true
+            }
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField "String", "host", "\"http://192.168.0.103:8080/\""
+            buildConfigField "String", "INSTALL_TYPE", "\"\""
+            resValue "string", "AppName", "智能针"
+
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "String", "host", "\"http://192.168.0.103:8080/\""
+            buildConfigField "String", "INSTALL_TYPE", "\"开发版\""
+            resValue "string", "AppName", "智能针测试版"
+
+            applicationIdSuffix ".debug"
+            minifyEnabled false
+
+            splits.abi.enable=false
+            splits.density.enable=false
+            aaptOptions.cruncherEnabled=false
+        }
+        demo {
+            buildConfigField "String", "host", "\"http://192.168.0.103:8080/\""
+            buildConfigField "String", "INSTALL_TYPE", "\"演示版\""
+            resValue "string", "AppName", "智能针演示版"
+
+            applicationIdSuffix ".debug"
+            minifyEnabled false
+        }
+    }
+
+    /**
+     * 针对greenDao的一些配置，实体数据持久化配置完后用make project就可以生成
+     */
+    greendao {
+        schemaVersion 15 // 数据库版本号
+        daoPackage 'com.bysj.znzapp.greendao.gen'// 自动生成的工具类的包名
+        targetGenDir 'src/main/java'// 路径
+    }
+
+    dexOptions {
+        preDexLibraries true
+        javaMaxHeapSize "4g"
+        dexInProcess = true
+    }
+
+    packagingOptions {
+        pickFirst "**/libBugly.so"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.dependencies["arouter-compiler"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api rootProject.ext.dependencies["arouter-api"]
+    api rootProject.ext.dependencies["arouter-compiler"]
+    api rootProject.ext.dependencies["bottom-navigation-bar"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["greendao"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["logger"]
+    api rootProject.ext.dependencies["material"]
+    api rootProject.ext.dependencies["multidex"]
+    api rootProject.ext.dependencies["okhttp3"]
+    api rootProject.ext.dependencies["percent"]
+    api rootProject.ext.dependencies["permission"]
+    api rootProject.ext.dependencies["pickview"]
+    api rootProject.ext.dependencies["richtext"]
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["butterknife"]
+    api rootProject.ext.dependencies["butterknife-compiler"]
+    api rootProject.ext.dependencies["projectlombok"]
+    api rootProject.ext.dependencies["glassfish"]
+
+    api project(":beagle:thirdsdks")
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}
